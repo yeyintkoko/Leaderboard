@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
         marginRight: 4,
     },
     searchInput: {
+        flex: 1,
         height: 40,
         paddingHorizontal: 10,
     },

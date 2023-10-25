@@ -56,7 +56,7 @@ export const getTopLeaderCards = (
         id: it.id,
         name: it.name,
         bananas: it.bananas,
-        rank: index,
+        rank: index + 1,
         searched:
             it.name.localeCompare(searchKey, undefined, {
                 sensitivity: 'accent',
