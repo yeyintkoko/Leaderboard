@@ -1,91 +1,53 @@
 /**
- * SecureNote React Native App
+ * Leaderboard React Native App
  * https://github.com/facebook/react-native
  *
  * @format
  */
 
-import React, {useEffect, useState} from 'react';
-import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {noteType, notesType} from './utilities/types';
-import {getData, saveData, saveList} from './controllers/notes';
-import Editor from './components/Editor';
-import NoteList from './components/NoteList';
+import React, {useCallback, useEffect, useState} from 'react';
+import {FlatList, SafeAreaView, StyleSheet, View} from 'react-native';
+import {LeaderCardType} from './utilities/types';
+import {getTopLeaderCards} from './utilities/leaderboard';
+import LeaderCard from './components/LeaderCard';
+import SearchBar from './components/SearchBar';
 
 const Main = (): JSX.Element => {
-    const [notes, setNotes] = useState<notesType>([
-        {
-            id: 1,
-            title: 'Step One',
-            note: 'Edit App.tsx to change this screen and then come back to see your edits.',
-        },
-        {
-            id: 2,
-            title: 'Step Two',
-            note: 'Edit App.tsx to change this screen and then come back to see your edits.',
-        },
-        {
-            id: 3,
-            title: 'Step Three',
-            note: 'Edit App.tsx to change this screen and then come back to see your edits.',
-        },
-    ]);
-    const [selectedNote, setSelectedNote] = useState<noteType>();
-    const [showEditor, setShowEditor] = useState(false);
-    const isDarkMode = useColorScheme() === 'dark';
+    const [leaderList, setLeaderList] = useState<LeaderCardType[]>([]);
 
-    useEffect(() => {
-        getStoredData();
+    const getLeaderList = useCallback((name: string) => {
+        setLeaderList(getTopLeaderCards(10, name));
     }, []);
 
-    const backgroundStyle = {
-        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    };
-
-    const getStoredData = async () => {
-        const data = await getData();
-        if (data) {
-            setNotes(data);
-        } else {
-            saveList(notes);
-        }
-    };
+    useEffect(() => {
+        getLeaderList('Patrick Kennedy');
+    }, []);
 
     return (
-        <SafeAreaView style={backgroundStyle}>
-            <StatusBar
-                barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-                backgroundColor={backgroundStyle.backgroundColor}
-            />
-            {showEditor && (
-                <Editor
-                    selectedNote={selectedNote}
-                    onClose={() => {
-                        setShowEditor(false);
-                    }}
-                    onSave={async note => {
-                        await saveData(note);
-                        getStoredData();
-                        setShowEditor(false);
-                    }}
+        <SafeAreaView style={styles.safeArea}>
+            <View style={styles.container}>
+                <SearchBar
+                    onChangeText={getLeaderList}
+                    onSearch={getLeaderList}
                 />
-            )}
-            {!showEditor && (
-                <NoteList
-                    notes={notes}
-                    onCreatePress={() => {
-                        setSelectedNote(undefined);
-                        setShowEditor(true);
-                    }}
-                    onItemPress={note => {
-                        setSelectedNote(note);
-                        setShowEditor(true);
-                    }}
+                <FlatList
+                    data={leaderList}
+                    renderItem={({item}) => <LeaderCard {...item} />}
+                    keyExtractor={item => item.id}
                 />
-            )}
+            </View>
         </SafeAreaView>
     );
 };
+
+const styles = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+        backgroundColor: '#fafafa',
+    },
+    container: {
+        flex: 1,
+    },
+});
 
 export default Main;

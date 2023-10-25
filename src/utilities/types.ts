@@ -1,8 +1,13 @@
+export interface LeaderType {
+    id: string;
+    name: string;
+    bananas: number;
+}
 
-export type noteType = {
-    id: number;
-    title: string;
-    note: string;
-};
-
-export type notesType = noteType[];
+export interface LeaderCardType {
+    id: string;
+    name: string;
+    bananas: number;
+    rank: number;
+    searched: boolean;
+}
