@@ -1,18 +1,11 @@
 import {useState} from 'react';
-import {
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
-} from 'react-native';
+import {Pressable, StyleSheet, Text, TextInput, View} from 'react-native';
 
 interface SearchBarProps {
-    onChangeText: (text: string) => void;
     onSearch: (text: string) => void;
 }
 
-const SearchBar = ({onChangeText, onSearch}: SearchBarProps) => {
+const SearchBar = ({onSearch}: SearchBarProps) => {
     const [keyword, setKeyword] = useState('');
 
     return (
@@ -23,16 +16,21 @@ const SearchBar = ({onChangeText, onSearch}: SearchBarProps) => {
                     style={styles.searchInput}
                     onChangeText={text => {
                         setKeyword(text);
-                        onChangeText(text);
                     }}
+                    placeholder="Search by name"
+                    autoComplete="off"
+                    autoCorrect={false}
+                    blurOnSubmit
+                    onSubmitEditing={() => onSearch(keyword)}
+                    clearButtonMode="always"
                 />
             </View>
-            <TouchableOpacity
-                activeOpacity={0.6}
+            <Pressable
+                testID="searchBtn"
                 style={styles.searchButton}
                 onPress={() => onSearch(keyword)}>
                 <Text style={styles.searchButtonText}>Search</Text>
-            </TouchableOpacity>
+            </Pressable>
         </View>
     );
 };

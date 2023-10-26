@@ -1,7 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {LayoutChangeEvent, StyleSheet, Text, View} from 'react-native';
 import {LeaderCardType} from '../utilities/types';
 
-const LeaderCard = (card: LeaderCardType) => {
+interface LeaderCardProps {
+    card: LeaderCardType;
+}
+const LeaderCard = ({card}: LeaderCardProps) => {
     return (
         <View style={styles.item}>
             <Text

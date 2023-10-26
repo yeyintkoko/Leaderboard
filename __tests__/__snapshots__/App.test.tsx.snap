@@ -1,0 +1,1830 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "#fafafa",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingHorizontal": 16,
+          "paddingVertical": 16,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "borderBottomLeftRadius": 4,
+            "borderColor": "#ccc",
+            "borderTopLeftRadius": 4,
+            "borderWidth": 1,
+            "flex": 1,
+            "flexDirection": "row",
+            "paddingLeft": 5,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "fontSize": 24,
+              "marginRight": 4,
+            }
+          }
+        >
+          🔍
+        </Text>
+        <TextInput
+          autoComplete="off"
+          autoCorrect={false}
+          blurOnSubmit={true}
+          clearButtonMode="always"
+          onChangeText={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="Search by name"
+          style={
+            {
+              "flex": 1,
+              "height": 40,
+              "paddingHorizontal": 10,
+            }
+          }
+        />
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#ccc",
+            "borderBottomRightRadius": 4,
+            "borderTopRightRadius": 4,
+            "height": 42,
+            "justifyContent": "center",
+            "paddingHorizontal": 16,
+          }
+        }
+        testID="searchBtn"
+      >
+        <Text
+          style={
+            {
+              "color": "#000",
+              "fontSize": 16,
+            }
+          }
+        >
+          Search
+        </Text>
+      </View>
+    </View>
+    <RCTScrollView
+      ListEmptyComponent={
+        <EmptyList
+          message="This user name does not exist! Please specify an existing user name!"
+        />
+      }
+      data={
+        [
+          {
+            "bananas": 36750,
+            "id": "zJsI8m74uqOI3el3EM1u64kbUWd2",
+            "name": "Chris Buckley",
+            "rank": 1,
+            "searched": false,
+          },
+          {
+            "bananas": 27800,
+            "id": "zOztg0xHJwN2GSHO9XSFAPvTl7E2",
+            "name": "Patrick Kennedy",
+            "rank": 2,
+            "searched": true,
+          },
+          {
+            "bananas": 19500,
+            "id": "zQH10NTZfYaXACdiF3V6hd7Ahn93",
+            "name": "Wolfgang Wirtz",
+            "rank": 3,
+            "searched": false,
+          },
+          {
+            "bananas": 18250,
+            "id": "zBgGPzU0saQuZHL7EH3T8xX6zCm2",
+            "name": "Bryan Holleman",
+            "rank": 4,
+            "searched": false,
+          },
+          {
+            "bananas": 17200,
+            "id": "zyqWz9Obwsfk9TIkDAoNshMGPtc2",
+            "name": "Kim Schytt-Nielsen ",
+            "rank": 5,
+            "searched": false,
+          },
+          {
+            "bananas": 14300,
+            "id": "znHBpuZTcVhC5DpMtSAYLGtWo023",
+            "name": "Tobias Fager",
+            "rank": 6,
+            "searched": false,
+          },
+          {
+            "bananas": 11250,
+            "id": "zOCMOcl3dKfgnJFvaS1Tk9Ifq3A3",
+            "name": "Lawrence Chan",
+            "rank": 7,
+            "searched": false,
+          },
+          {
+            "bananas": 8300,
+            "id": "zRa6fy2hvtYWXkKI3jKoASOqmd32",
+            "name": "Hannah Krzywicki",
+            "rank": 8,
+            "searched": false,
+          },
+          {
+            "bananas": 6550,
+            "id": "zDHhDho9h5fTDntQhyEg66RMvqK2",
+            "name": "Emma",
+            "rank": 9,
+            "searched": false,
+          },
+          {
+            "bananas": 6200,
+            "id": "zOKzuWGBUVWRrTxyEHgTKc4gin32",
+            "name": "Alexander Mochalski",
+            "rank": 10,
+            "searched": false,
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      getItemLayout={[Function]}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={[]}
+      viewabilityConfigCallbackPairs={[]}
+    >
+      <View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  null,
+                ]
+              }
+            >
+              Chris Buckley
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                1
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                36750
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                No
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  {
+                    "color": "brown",
+                  },
+                ]
+              }
+            >
+              Patrick Kennedy
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                2
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                27800
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                Yes
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  null,
+                ]
+              }
+            >
+              Wolfgang Wirtz
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                3
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                19500
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                No
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  null,
+                ]
+              }
+            >
+              Bryan Holleman
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                4
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                18250
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                No
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  null,
+                ]
+              }
+            >
+              Kim Schytt-Nielsen 
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                5
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                17200
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                No
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  null,
+                ]
+              }
+            >
+              Tobias Fager
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                6
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                14300
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                No
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  null,
+                ]
+              }
+            >
+              Lawrence Chan
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                7
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                11250
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                No
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  null,
+                ]
+              }
+            >
+              Hannah Krzywicki
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                8
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                8300
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                No
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  null,
+                ]
+              }
+            >
+              Emma
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                9
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                6550
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                No
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              {
+                "backgroundColor": "#fff",
+                "borderRadius": 4,
+                "elevation": 5,
+                "marginBottom": 10,
+                "marginHorizontal": 16,
+                "paddingHorizontal": 16,
+                "paddingVertical": 10,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.25,
+                "shadowRadius": 3.84,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "marginBottom": 4,
+                  },
+                  null,
+                ]
+              }
+            >
+              Alexander Mochalski
+            </Text>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Rank
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                10
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Bananas
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                6200
+              </Text>
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginBottom": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "width": 80,
+                  }
+                }
+              >
+                Searched
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                  }
+                }
+              >
+                -
+              </Text>
+              <Text
+                style={
+                  {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "marginLeft": 10,
+                  }
+                }
+              >
+                No
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTSafeAreaView>
+`;

@@ -63,3 +63,17 @@ export const getTopLeaderCards = (
             }) === 0,
     }));
 };
+
+export const getRankByName = (
+    name: string,
+    topCount: number,
+): number | undefined => {
+    const leaders = getTopLeaderCards(topCount, name);
+    const leader = leaders.find(
+        it =>
+            it.name.localeCompare(name, undefined, {
+                sensitivity: 'accent',
+            }) === 0,
+    );
+    return leader?.rank;
+};
