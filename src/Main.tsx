@@ -5,73 +5,132 @@
  * @format
  */
 
-import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {FlatList, Platform, SafeAreaView, StyleSheet, View} from 'react-native';
-import {useSelector, useDispatch} from 'react-redux';
-import {getRankByName, getTopLeaderCards} from './utilities/leaderboard';
-import LeaderCard from './components/LeaderCard';
-import SearchBar from './components/SearchBar';
-import EmptyList from './components/EmptyList';
-import type {RootState} from './redux/store';
-import {setLeaders, reset} from './redux/reducers/leaderboardSlice';
+import React, {useState} from 'react';
+import {
+    Platform,
+    SafeAreaView,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
+} from 'react-native';
 
 const ITEM_HEIGHT = Platform.select({ios: 106.33, android: 116});
 const LEADER_COUNT = 10;
 
+interface WeatherType {
+    description: string;
+}
+
+interface WeatherItem {
+    sunrise: number;
+    sunset: number;
+    humidity: number;
+    temp: number;
+    weather: WeatherType[];
+}
+
 const Main = (): JSX.Element => {
-    const leaders = useSelector(
-        (state: RootState) => state.leaderboard.leaders,
-    );
-    const dispatch = useDispatch();
-    const refFlatList = useRef<FlatList>(null);
-    const [searchedName, setSearchedName] = useState('Patrick Kennedy');
+    const [weather, setWeather] = useState<WeatherItem | undefined>();
+    const [lat, setLat] = useState('');
+    const [lng, setLng] = useState('');
+    const [error, setError] = useState('');
 
-    const getLeaderList = useCallback((name: string) => {
-        setSearchedName(name);
-        const list = getTopLeaderCards(LEADER_COUNT, name);
-        dispatch(setLeaders(list));
-    }, []);
+    const getWeatherData = () => {
+        fetch(
+            `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&appid=34f3bb83e6fe7e4e7218fef57c2215b7`,
+        )
+            .then(it => it.json())
+            .then(data => {
+                console.log(JSON.stringify(data, null, 4));
+                if (data.cod) {
+                    setError(data.message);
+                    return;
+                }
 
-    const scrollToBottom = useCallback(() => {
-        if (leaders.length) {
-            const rank = getRankByName(searchedName, LEADER_COUNT);
-            refFlatList.current?.scrollToIndex({
-                index: rank ? rank - 1 : 0,
-                animated: true,
+                if (!data) {
+                    setError('Location not found!');
+                    return;
+                }
+                setWeather(data.current);
+                setLat('');
+                setLng('');
+            })
+            .catch(error => {
+                setError(error.message);
             });
+    };
+
+    const handleSearch = () => {
+        if (!lat || !lng) {
+            setError('Please enter latitude and longitude.');
+            return;
         }
-    }, [leaders]);
-
-    useEffect(scrollToBottom, [scrollToBottom]);
-
-    useEffect(() => {
-        getLeaderList(searchedName);
-        return () => {
-            dispatch(reset());
-        };
-    }, []);
+        console.log(typeof lat);
+        if (!/^\d{1,}\.?\d{1,}$/.test(lat)) {
+            setError('Please enter only number to latitude');
+            return;
+        }
+        if (!/^\d{1,}\.?\d{1,}$/.test(lng)) {
+            setError('Please enter only number to longitude');
+            return;
+        }
+        setError('');
+        getWeatherData();
+    };
 
     return (
         <SafeAreaView style={styles.safeArea}>
             <View style={styles.container}>
-                <SearchBar onSearch={getLeaderList} />
-                <FlatList
-                    ref={refFlatList}
-                    data={leaders}
-                    renderItem={({item}) => <LeaderCard card={item} />}
-                    getItemLayout={(data, index) => ({
-                        length: ITEM_HEIGHT,
-                        offset: ITEM_HEIGHT * index,
-                        index,
-                    })}
-                    keyExtractor={item => item.id}
-                    ListEmptyComponent={
-                        <EmptyList
-                            message="This user name does not exist! Please specify an
-                    existing user name!"
-                        />
-                    }
-                />
+                <View style={styles.inputRow}>
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={setLat}
+                        value={lat}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={setLng}
+                        value={lng}
+                    />
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={handleSearch}>
+                        <Text style={styles.buttonText}>Search</Text>
+                    </TouchableOpacity>
+                </View>
+
+                {weather && (
+                    <>
+                        <View style={styles.labelRow}>
+                            <Text style={styles.label}>Weather: </Text>
+                            <Text style={styles.value}>
+                                {weather?.weather[0]?.description}
+                            </Text>
+                        </View>
+                        <View style={styles.labelRow}>
+                            <Text style={styles.label}>Humidity: </Text>
+                            <Text style={styles.value}>
+                                {weather?.humidity}
+                            </Text>
+                        </View>
+                        <View style={styles.labelRow}>
+                            <Text style={styles.label}>temperature: </Text>
+                            <Text style={styles.value}>{weather?.temp}</Text>
+                        </View>
+                        <View style={styles.labelRow}>
+                            <Text style={styles.label}>Sunrise: </Text>
+                            <Text style={styles.value}>{weather?.sunrise}</Text>
+                        </View>
+                        <View style={styles.labelRow}>
+                            <Text style={styles.label}>Sunset: </Text>
+                            <Text style={styles.value}>{weather?.sunset}</Text>
+                        </View>
+                    </>
+                )}
+
+                <Text style={styles.error}>{error}</Text>
             </View>
         </SafeAreaView>
     );
@@ -84,6 +143,58 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
+        padding: 16,
+        paddingTop: 25,
+    },
+    labelRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 10,
+    },
+    label: {
+        fontSize: 16,
+        color: '#ccc',
+    },
+    value: {
+        fontSize: 18,
+        textTransform: 'capitalize',
+        fontWeight: '500',
+    },
+    inputRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 25,
+    },
+    input: {
+        flex: 1,
+        height: 40,
+        paddingHorizontal: 5,
+        borderWidth: 1,
+        borderColor: '#000',
+        borderRadius: 4,
+        marginRight: 10,
+    },
+    button: {
+        flex: 1,
+        height: 40,
+        borderWidth: 1,
+        borderColor: '#000',
+        borderRadius: 4,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    buttonText: {
+        fontSize: 18,
+        color: 'blue',
+        fontWeight: '600',
+    },
+    error: {
+        alignSelf: 'center',
+        color: 'red',
+        fontSize: 16,
+        fontWeight: '500',
+        textAlign: 'center',
+        width: 250,
     },
 });
 
